@@ -14,10 +14,11 @@ import java.util.Optional;
 public class UserService {
     @Resource
     private UserRepository userRepository;
+
     /**调用接口中的save方法进行封装，实现增加一条记录的功能*/
     @Transactional
     public User save(User user){
-      return userRepository.save(User);
+      return userRepository.save(user);
     }
     /**调用接口中的deleteById方法进行封装，实现删除的功能*/
     @Transactional
